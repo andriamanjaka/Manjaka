@@ -107,7 +107,7 @@ export default function Navbar() {
           </li>
           <li>
             <a href="#skills" className={`nav-link ${activeSection === "skills" ? "active" : ""}`}>
-              Competences
+              Compétences
             </a>
           </li>
           <li>
@@ -115,7 +115,7 @@ export default function Navbar() {
               href="#experience"
               className={`nav-link ${activeSection === "experience" ? "active" : ""}`}
             >
-              Experiences
+              Expériences
             </a>
           </li>
           <li>
@@ -177,10 +177,10 @@ export default function Navbar() {
             Projets
           </a>
           <a href="#skills" className="nav-mobile-link" onClick={() => setIsMenuOpen(false)}>
-            Competences
+            Compétences
           </a>
           <a href="#experience" className="nav-mobile-link" onClick={() => setIsMenuOpen(false)}>
-            Experiences
+            Expériences
           </a>
           <a href="#services" className="nav-mobile-link" onClick={() => setIsMenuOpen(false)}>
             Services

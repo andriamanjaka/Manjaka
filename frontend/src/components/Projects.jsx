@@ -28,7 +28,7 @@ const projects = [
   {
     title: "Application de Gestion d'Entreprise",
     description:
-      "Plateforme complete de gestion d'entreprise avec dashboard analytique, gestion des employes et suivi des performances en temps reel.",
+      "Plateforme complète de gestion d'entreprise avec dashboard analytique, gestion des employés et suivi des performances en temps réel.",
     tech: ["React", "Node.js", "MySQL", "Express"],
     image: ge1,
     gallery: [ge1, ge2, ge3, ge4, ge5, ge6],
@@ -64,13 +64,13 @@ const projects = [
   {
     title: "Smart planning",
     description:
-      "une application web intelligente qui aide les étudiants en informatique à organiser leur temps d’apprentissage, planifier leurs études et progresser dans de nouvelles compétences technologiques.",
+      "Une application web intelligente qui aide les étudiants en informatique à organiser leur temps d’apprentissage, planifier leurs études et progresser dans de nouvelles compétences technologiques.",
     tech: ["React.js", "Node.js", "Express", "MySQL"],
     image: plan1,
     gallery: [plan1, plan2, plan3, plan4, plan5, plan6, plan7],
     links: {
       live: "#",
-      github: "https://github.com/andriamanjaka/Smart-Planning"
+      github: "https://github.com/andriamanjaka/SmartPlaning/tree/main/smart-study-planner"
     }
   },
 ];

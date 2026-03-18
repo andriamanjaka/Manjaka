@@ -1,14 +1,5 @@
 const experiences = [
  
-
-
-    {
-    period: " juin -2025",
-    title: "Développeur FullStack",
-    company: "Freelance",
-    description: "Réinscription de competion de jeux échec en ligne ",
-    tags: ["JavaScript", "React.js", "Express","Mysql"]
-  },
   {
     period: "2023 - 2024",
     title: "Développeur FullStack",
@@ -23,13 +14,6 @@ const experiences = [
     description: "Conception et réalisation d’une application pour la gestion de réservation de chambre à l’arc hotel",
     tags: ["JAVA","PostGreSQL "]
   },
-    {
-    period: "2022 - 2023",
-    title: "Développeur ",
-    company: "Freelance",
-    description: "créer un système de calendrier pour notre site web de livraison de repas.  l’arc hotel",
-    tags: ["Node et React Js","Mysql "]
-  }
 ];
 
 export default function Experience() {
