@@ -4,9 +4,11 @@ export default function Navbar() {
   const [activeSection, setActiveSection] = useState("home");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [theme, setTheme] = useState("dark");
+  const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
+      setIsScrolled(window.scrollY > 8);
       const sections = ["home", "about", "skills", "projects", "experience", "services", "contact"];
       const scrollY = window.scrollY + 100;
 
@@ -23,6 +25,7 @@ export default function Navbar() {
     };
 
     window.addEventListener("scroll", handleScroll);
+    handleScroll();
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -35,6 +38,19 @@ export default function Navbar() {
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+
+  useEffect(() => {
+    if (!isMenuOpen) return;
+
+    const handleKeyDown = (event) => {
+      if (event.key === "Escape") {
+        setIsMenuOpen(false);
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [isMenuOpen]);
 
   useEffect(() => {
     const storedTheme = localStorage.getItem("theme");
@@ -53,7 +69,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="navbar">
+    <nav className={`navbar ${isScrolled ? "scrolled" : ""}`}>
       <div className="nav-content">
         <a href="#home" className="logo">
               ANDRIAMANJAKA <span className="logo-accent"></span>
@@ -63,6 +79,7 @@ export default function Navbar() {
           className={`nav-toggle ${isMenuOpen ? "open" : ""}`}
           aria-label="Menu"
           aria-expanded={isMenuOpen}
+          aria-controls="nav-mobile-menu"
           onClick={() => setIsMenuOpen((prev) => !prev)}
         >
           <span />
@@ -132,7 +149,7 @@ export default function Navbar() {
             Contact
           </a>
         </div>
-        <div className={`nav-mobile ${isMenuOpen ? "open" : ""}`}>
+        <div id="nav-mobile-menu" className={`nav-mobile ${isMenuOpen ? "open" : ""}`}>
           <button
             type="button"
             className="theme-toggle mobile"

@@ -58,7 +58,7 @@ const projects = [
     gallery: [port1, port2, port3, port4, port5, port6],
     links: {
       live: "#",
-      github: "#"
+      github: "https://github.com/andriamanjaka/Manjaka"
     }
   },
   {
@@ -70,7 +70,7 @@ const projects = [
     gallery: [plan1, plan2, plan3, plan4, plan5, plan6, plan7],
     links: {
       live: "#",
-      github: "#"
+      github: "https://github.com/andriamanjaka/Smart-Planning"
     }
   },
 ];
